@@ -1,0 +1,6 @@
+// src/components/Skeleton.jsx
+export default function Skeleton({ className }) {
+  return (
+    <div className={`animate-pulse bg-slate-200 rounded-xl ${className}`}></div>
+  );
+}

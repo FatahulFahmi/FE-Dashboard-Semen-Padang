@@ -7,23 +7,25 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
-import { trendData } from "../data/mockdata";
 
-export default function TrendChart() {
+export default function TrendChart({ data }) {
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
-      <div className="mb-6">
-        <h3 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-          <Activity size={20} className="text-blue-600" /> Tren Laporan Mingguan
-        </h3>
-      </div>
+    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+      <h3 className="text-lg font-bold text-gray-800 flex items-center gap-2 mb-6">
+        <Activity size={20} className="text-blue-600" /> Tren Laporan Mingguan
+      </h3>
       <div className="h-80 w-full">
-        <ResponsiveContainer width="100%" height="100%">
+        {/* Tambahkan minWidth={1} minHeight={1} untuk menghilangkan warning kuning */}
+        <ResponsiveContainer
+          width="100%"
+          height="100%"
+          minWidth={1}
+          minHeight={1}
+        >
           <LineChart
-            data={trendData}
+            data={data}
             margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
           >
             <CartesianGrid
@@ -51,13 +53,12 @@ export default function TrendChart() {
                 boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
               }}
             />
-            <Legend wrapperStyle={{ paddingTop: "20px" }} />
             <Line
               type="monotone"
               dataKey="IP"
               stroke="#2563EB"
               strokeWidth={3}
-              dot={{ r: 4 }}
+              dot={{ r: 4, fill: "#2563EB" }}
               activeDot={{ r: 6 }}
             />
             <Line
@@ -65,7 +66,7 @@ export default function TrendChart() {
               dataKey="KS"
               stroke="#10B981"
               strokeWidth={3}
-              dot={{ r: 4 }}
+              dot={{ r: 4, fill: "#10B981" }}
               activeDot={{ r: 6 }}
             />
             <Line
@@ -73,7 +74,7 @@ export default function TrendChart() {
               dataKey="P"
               stroke="#F59E0B"
               strokeWidth={3}
-              dot={{ r: 4 }}
+              dot={{ r: 4, fill: "#F59E0B" }}
               activeDot={{ r: 6 }}
             />
           </LineChart>

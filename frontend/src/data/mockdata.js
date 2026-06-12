@@ -28,6 +28,7 @@ export const sourceData = [
 ];
 
 // 4. Data untuk Tabel Log Terbaru
+// src/data/mockData.js (Bagian paling bawah)
 export const recentLogs = [
   {
     id: "LOG-001",
@@ -62,6 +63,55 @@ export const recentLogs = [
     divisi: "KS",
     sumber: "Google Sheets",
     tanggal: "05 Jun 2026",
+    status: "Sukses",
+  },
+  {
+    id: "LOG-006",
+    divisi: "P",
+    sumber: "Google Sheets",
+    tanggal: "05 Jun 2026",
+    status: "Sukses",
+  },
+  {
+    id: "LOG-007",
+    divisi: "IP",
+    sumber: "OneDrive",
+    tanggal: "04 Jun 2026",
+    status: "Gagal",
+  },
+  {
+    id: "LOG-008",
+    divisi: "KS",
+    sumber: "Firebase",
+    tanggal: "04 Jun 2026",
+    status: "Sukses",
+  },
+  {
+    id: "LOG-009",
+    divisi: "P",
+    sumber: "Firebase",
+    tanggal: "03 Jun 2026",
+    status: "Sukses",
+  },
+  {
+    id: "LOG-010",
+    divisi: "IP",
+    sumber: "Google Sheets",
+    tanggal: "03 Jun 2026",
+    status: "Sukses",
+  },
+  {
+    id: "LOG-011",
+    divisi: "KS",
+    sumber: "OneDrive",
+    tanggal: "02 Jun 2026",
+    status: "Sukses",
+  },
+  {
+    id: "LOG-012",
+    divisi: "P",
+    sumber: "Google Sheets",
+    tanggal: "01 Jun 2026",
     status: "Sukses",
   },
 ];
